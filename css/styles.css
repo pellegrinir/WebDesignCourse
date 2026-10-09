@@ -22,10 +22,10 @@ ul li a {
 }
 
 ul li a.active {
-  background-color: #529;
+  background-color: #30038a;
 }
 
 ul li a:hover {
-  background-color: #1a1;
+  background-color: #52942c;
   flex: 2; 
 }
