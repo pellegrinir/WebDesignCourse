@@ -3,7 +3,9 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333333;
+  background-color: #393;
+  display: flex;
+  justify-content: center;
 }
 
 ul li {
@@ -16,8 +18,14 @@ ul li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  transition: background-color .5s;
+}
+
+ul li a.active {
+  background-color: #04AA6D;
 }
 
 ul li a:hover {
-  background-color: #111111;
+  background-color: #1a1;
+  width: 200%; 
 }
