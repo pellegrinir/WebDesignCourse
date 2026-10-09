@@ -3,6 +3,7 @@ ul {
   margin: 0;
   padding: 0;
   position: sticky;
+  top:0;
   overflow: hidden;
   background-color: #393;
   display: flex;
@@ -19,14 +20,14 @@ ul li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  transition: width .5s, background-color .5s;
+  transition: width .5s;
 }
 
 ul li a.active {
   background-color: #30038a;
 }
 
-ul li a:hover {
-  background-color: #52942c;
+ul li:not(.active):hover{
+  background-color: #f72516;
   flex: 2; 
 }
