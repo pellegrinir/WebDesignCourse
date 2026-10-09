@@ -29,5 +29,4 @@ ul li a.active {
 
 ul li:not(.active):hover{
   background-color: #cf1204;
-  flex: 1.1; 
 }
