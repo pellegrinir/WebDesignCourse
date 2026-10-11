@@ -8,7 +8,8 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #393;
+  background-color: #818aa3;
+  color: #000;
   display: flex;
   justify-content: center;
   position: sticky;
@@ -29,9 +30,9 @@ ul li a {
 }
 
 ul li a.active {
-  background-color: #30038a;
+  background-color: #C5DCA0;
 }
 
 ul li:not(.active):hover{
-  background-color: #cf1204;
+  background-color: #F5F2B8;
 }
