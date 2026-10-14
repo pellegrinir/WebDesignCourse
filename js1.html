@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <script>
+      function add()
+      {
+        let a = getElementById("num1");
+        let b = getElementById("num2");
+        let c = Number(a) + Number(b);
+        getElementById("answer").innerHtml = c;
+      }
+      
+    </script>
+  </head>
+  <body>
+    <p> <input id ="num1"> Enter the first number </p>
+    <p> <input id ="num2"> Enter the second number </p>
+    <p> <span id = "answer">______ </span></p>
+    <br>
+    <button onclick=add()>+</button>
+  </body>
+</html>
