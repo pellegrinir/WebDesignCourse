@@ -12,7 +12,13 @@
         let P = ((r/100/12) * PV) / (1-(1+(r/100/12))**-(n*12));
         console.log("value", a, "downpayment", b, "Loan Amount", PV, "years", n, "rate", r, "payment", p);
         
-        document.getElementById("answer").innerHTML = "If you have a worth of $"a.toFixed(2) ", and a downpayment of $"b.toFixed(2) 
+        document.getElementById("answer1").innerHTML = "If you have a worth of $"a.toFixed(2) ",";
+        document.getElementById("answer2").innerHTML = "and a downpayment of $"b.toFixed(2) ",";
+        document.getElementById("answer3").innerHTML = "for a loan amount of $"PV.toFixed(2) ",";
+        document.getElementById("answer4").innerHTML = "for "n "years,";
+        document.getElementById("answer5").innerHTML = "at %"r "interest:";
+        document.getElementById("answer6").innerHTML = "Your payments will be $"p.toFixed(2) "eachmonth.";
+          and a downpayment of $"b.toFixed(2) 
           " for a loan amount of $"PV.toFixed(2) ", If you take a loan for " n " years at " r "%, your monthly payment will be $" P.toFixed(2);
       } 
     </script
@@ -28,7 +34,13 @@
     <button onclick="getPayment()">Calculate the Monthly Payment</button>
     <br>
     <br>
-    <p> <span id="answer">___</span></p> 
+    <p> <span id="answer1">___</span></p> 
+    <p> <span id="answer2">___</span></p> 
+    <p> <span id="answer3">___</span></p> 
+    <p> <span id="answer4">___</span></p> 
+    <p> <span id="answer5">___</span></p> 
+    <br>
+    <p> <span id="answer6">___</span></p> 
     <br>
     <br>
   </body>
