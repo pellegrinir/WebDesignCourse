@@ -14,11 +14,11 @@
         let r = document.getElementById("rate").value;
         let P = ((r/100/12) * PV) / (1-(1+(r/100/12))**-(n*12));
         
- document.getElementById("answer1").innerHTML = "If the initial value is: $" + Number(worth).toFixed(2) + ",";
- document.getElementById("answer2").innerHTML = "and have a downpayment of: $" + Number(dp).toFixed(2) + ",";
- document.getElementById("answer3").innerHTML = "for an initial loan amount of: $" + PV.toFixed(2) + ".";
- document.getElementById("answer4").innerHTML = "If you loan is " + n + " years ( " + 12*Number(n) + " months) at " + Number(r).toFixed(3) + "% interest:";
- document.getElementById("answer6").innerHTML = "Your payments will be $" + P.toFixed(2) + " each month.";
+        document.getElementById("answer1").innerHTML = "If the initial value is: $" + Number(worth).toFixed(2) + ",";
+        document.getElementById("answer2").innerHTML = "and have a downpayment of: $" + Number(dp).toFixed(2) + ",";
+        document.getElementById("answer3").innerHTML = "for an initial loan amount of: $" + PV.toFixed(2) + ".";
+        document.getElementById("answer4").innerHTML = "If you loan is " + n + " years ( " + 12*Number(n) + " months) at " + Number(r).toFixed(3) + "% interest:";
+        document.getElementById("answer6").innerHTML = "Your payments will be $" + P.toFixed(2) + " each month.";
       } 
     </script
 
