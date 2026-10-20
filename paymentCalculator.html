@@ -4,28 +4,31 @@
     <title>Simple javascript example</title>
     <script>
       function getPayment(){
-        let a = document.getElementById("num1").value;
-        let b = document.getElementById("num2").value;
-        let c = Number(a) + Number(b);
-        document.getElementById("answer").innerHTML = c;
+        let a = document.getElementById("val").value;
+        let b = document.getElementById("downpayment").value;
+        let PV = a-b;
+        let n = document.getElementById("years").value;
+        let r = document.getElementById("rate").value;
+        let P = ((r/100/12) * PV) / (1-(1+(r/100/12))**-(n*12));
+        
+        document.getElementById("answer").innerHTML = "If you have a worth of $"a.toFixed(2) ", and a downpayment of $"b.toFixed(2) 
+          " for a loan amount of $"PV.toFixed(2) ", If you take a loan for " n " years at " r "%, your monthly payment will be $" P.toFixed(2);
       } 
     </script
   </head>
   <body>
- <p> <input id ="num1"> Enter the first number </p>
-    <p> <input id ="num2"> Enter the second number </p>
+    <h1> Loan Payment Calculator</h1>
+    <p> <input id ="val"> Enter value of the item </p>
+    <p> <input id ="downpayment"> Enter the down payment </p>
+    <p> <input id ="years"> Years </p>
+    <p> <input id ="rate"> % -- AnnualInterest rate </p>
     <br>
     <br>
-    <p>
-      <button onclick="add()">+</button>
-      <button onclick="subtract()">-</button>
-      <button onclick="multiply()">*</button>
-      <button onclick="divide()">/</button>
-      <button onclick="toThePower()">**</button>
-    </p>
+    <button onclick="getPayment()">Calculate the Monthly Payment</button>
     <br>
     <br>
-    <p> The answer is: <span id = "answer">______ </span></p>
+    <p> <span id = "answer"></span></p> 
+    <br>
     <br>
   </body>
 </html>
