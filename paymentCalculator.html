@@ -1,0 +1,32 @@
+<!DOCTYPE html> 
+<html>
+  <head>
+    <title>Simple javascript example</title>
+    <script>
+      function getPayment(){
+        let a = document.getElementById("num1").value;
+        let b = document.getElementById("num2").value;
+        let c = Number(a) + Number(b);
+        document.getElementById("answer").innerHTML = c;
+      } 
+    </script
+  </head>
+  <body>
+ <p> <input id ="num1"> Enter the first number </p>
+    <p> <input id ="num2"> Enter the second number </p>
+    <br>
+    <br>
+    <p>
+      <button onclick="add()">+</button>
+      <button onclick="subtract()">-</button>
+      <button onclick="multiply()">*</button>
+      <button onclick="divide()">/</button>
+      <button onclick="toThePower()">**</button>
+    </p>
+    <br>
+    <br>
+    <p> The answer is: <span id = "answer">______ </span></p>
+    <br>
+  </body>
+</html>
+
