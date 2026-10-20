@@ -7,20 +7,18 @@
 
     <script>
       function getPayment(){
-        let value = document.getElementById("val").value;
+        let worth = document.getElementById("val").value;
         let dp = document.getElementById("downpayment").value;
-        let PV = a-b;
+        let PV = worth - dp;
         let n = document.getElementById("years").value;
         let r = document.getElementById("rate").value;
         let P = ((r/100/12) * PV) / (1-(1+(r/100/12))**-(n*12));
-        console.log("value", a, "downpayment", b, "Loan Amount", PV, "years", n, "rate", r, "payment", p);
         
-        document.getElementById("answer1").innerHTML = "If you have a worth of $"value.toFixed(2) ",";
-        document.getElementById("answer2").innerHTML = "and a downpayment of $"dp.toFixed(2) ",";
-        document.getElementById("answer3").innerHTML = "for a loan amount of $"PV.toFixed(2) ",";
-        document.getElementById("answer4").innerHTML = "for "n "years,";
-        document.getElementById("answer5").innerHTML = "at %"r "interest:";
-        document.getElementById("answer6").innerHTML = "Your payments will be $"p.toFixed(2) "eachmonth.";
+ document.getElementById("answer1").innerHTML = "If the initial value is: $" + Number(worth).toFixed(2) + ",";
+ document.getElementById("answer2").innerHTML = "and have a downpayment of: $" + Number(dp).toFixed(2) + ",";
+ document.getElementById("answer3").innerHTML = "for an initial loan amount of: $" + PV.toFixed(2) + ".";
+ document.getElementById("answer4").innerHTML = "If you loan is " + n + " years ( " + 12*Number(n) + " months) at " + Number(r).toFixed(3) + "% interest:";
+ document.getElementById("answer6").innerHTML = "Your payments will be $" + P.toFixed(2) + " each month.";
       } 
     </script
 
@@ -28,7 +26,7 @@
     <p> <input id ="val"> Enter value of the item </p>
     <p> <input id ="downpayment"> Enter the down payment </p>
     <p> <input id ="years"> Years </p>
-    <p> <input id ="rate"> % -- AnnualInterest rate </p>
+    <p> <input id ="rate"> % -- Annual Interest rate </p>
     <br>
     <br>
     <button onclick="getPayment()">Calculate the Monthly Payment</button>
@@ -38,11 +36,9 @@
     <p> <span id="answer2">___</span></p> 
     <p> <span id="answer3">___</span></p> 
     <p> <span id="answer4">___</span></p> 
-    <p> <span id="answer5">___</span></p> 
     <br>
     <p> <span id="answer6">___</span></p> 
     <br>
     <br>
   </body>
 </html>
-
