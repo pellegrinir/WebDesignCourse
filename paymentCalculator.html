@@ -7,8 +7,8 @@
 
     <script>
       function getPayment(){
-        let a = document.getElementById("val").value;
-        let b = document.getElementById("downpayment").value;
+        let value = document.getElementById("val").value;
+        let dp = document.getElementById("downpayment").value;
         let PV = a-b;
         let n = document.getElementById("years").value;
         let r = document.getElementById("rate").value;
@@ -21,8 +21,6 @@
         document.getElementById("answer4").innerHTML = "for "n "years,";
         document.getElementById("answer5").innerHTML = "at %"r "interest:";
         document.getElementById("answer6").innerHTML = "Your payments will be $"p.toFixed(2) "eachmonth.";
-          and a downpayment of $"b.toFixed(2) 
-          " for a loan amount of $"PV.toFixed(2) ", If you take a loan for " n " years at " r "%, your monthly payment will be $" P.toFixed(2);
       } 
     </script
 
