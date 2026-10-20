@@ -15,8 +15,8 @@
         let P = ((r/100/12) * PV) / (1-(1+(r/100/12))**-(n*12));
         console.log("value", a, "downpayment", b, "Loan Amount", PV, "years", n, "rate", r, "payment", p);
         
-        document.getElementById("answer1").innerHTML = "If you have a worth of $"a.toFixed(2) ",";
-        document.getElementById("answer2").innerHTML = "and a downpayment of $"b.toFixed(2) ",";
+        document.getElementById("answer1").innerHTML = "If you have a worth of $"value.toFixed(2) ",";
+        document.getElementById("answer2").innerHTML = "and a downpayment of $"dp.toFixed(2) ",";
         document.getElementById("answer3").innerHTML = "for a loan amount of $"PV.toFixed(2) ",";
         document.getElementById("answer4").innerHTML = "for "n "years,";
         document.getElementById("answer5").innerHTML = "at %"r "interest:";
